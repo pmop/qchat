@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Toy project chat application to put RoR, Tailwindcss, and websockets wizardy in practice
 
-Things you may want to cover:
+### Goals
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Implement ephemeral chatting application
+  - Once all clients leave, everything is wiped
+  - Text only
+  - v1 will be a pure, classic RoR app
