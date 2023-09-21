@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Chat room messages</h1>
+
+<div id="chat_room_messages">
+  <% @chat_room_messages.each do |chat_room_message| %>
+    <%= render chat_room_message %>
+    <p>
+      <%= link_to "Show this chat room message", chat_room_message %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New chat room message", new_chat_room_message_path %>

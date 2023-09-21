@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @chat_room_message %>
+
+<div>
+  <%= link_to "Edit this chat room message", edit_chat_room_message_path(@chat_room_message) %> |
+  <%= link_to "Back to chat room messages", chat_room_messages_path %>
+
+  <%= button_to "Destroy this chat room message", @chat_room_message, method: :delete %>
+</div>

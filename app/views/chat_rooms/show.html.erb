@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+<div class="m-2">
+  <span>Chat Room: <%= @chat_room.name %></span>
+</div>
+<div class="m-2">
+  <%= link_to "Back to chat rooms", chat_rooms_path %>
+</div>
+
+<div class="h-full w-full m-2">
+  <div class="flex-col w-0.75">
+    <% @chat_room_messages.each do |chat_room_message| %>
+      <div class="grid grid-cols-5">
+        <div class="col-span-1">
+          <span><%= chat_room_message.user_name %></span>
+        </div>
+        <div class="border-solid border-2 border-indigo-500/100 rounded shadow-lg mt-5 p-3 col-span-4">
+          <span><%= chat_room_message.content %></span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
