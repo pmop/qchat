@@ -1,20 +1,19 @@
-<p style="color: green"><%= notice %></p>
-<div class="m-2">
-  <span>Chat Room: <%= @chat_room.name %></span>
-</div>
 <div class="m-2">
   <%= link_to "Back to chat rooms", chat_rooms_path %>
 </div>
+<div class="m-4">
+  <p class="text-center">Chat Room: <%= @chat_room.name %></p>
+</div>
 
-<div class="h-full w-full m-2">
+<div class="h-full w-full m-10">
   <div class="flex-col w-0.75">
     <% @chat_room_messages.each do |chat_room_message| %>
-      <div class="grid grid-cols-5">
-        <div class="col-span-1">
-          <span><%= chat_room_message.user_name %></span>
+      <div class="flex gap-4">
+        <div class="w-18 h-24 flex flex-col-reverse">
+          <p class="py-6"><%= chat_room_message.user_name %></p>
         </div>
-        <div class="border-solid border-2 border-indigo-500/100 rounded shadow-lg mt-5 p-3 col-span-4">
-          <span><%= chat_room_message.content %></span>
+        <div class="bubble bubble-left shadow-lg mt-5 p-3">
+          <p><%= chat_room_message.content %></p>
         </div>
       </div>
     <% end %>
