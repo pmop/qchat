@@ -14,8 +14,14 @@
  *= require_self
  */
 
+/*TODO: fix this*/
+::placeholder {
+  color: rgb(203 213 225) !important;
+  text-align: center;
+}
+
 body {
-  background-color: #3a3861;
+  background: radial-gradient(at left center, #0d172a, #000) border-box;
   color: #fff;
 }
 
@@ -34,12 +40,14 @@ body {
   background: radial-gradient(at center top, #51495F, #251237) border-box;
   color: #fff;
 }
+
 .bubble-left {
   --_d: 0%;
   border-left: var(--t) solid #0000;
   margin-right: var(--t);
   place-self: start;
 }
+
 .bubble-right {
   --_d: 100%;
   border-right: var(--t) solid #0000;
